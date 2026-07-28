@@ -1,0 +1,156 @@
+.shipment-modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(6px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+    padding:24px;
+}
+
+.shipment-modal{
+    width:100%;
+    max-width:900px;
+    max-height:90vh;
+    overflow-y:auto;
+    background:rgba(15,23,42,.95);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:30px;
+    color:white;
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+}
+
+.shipment-modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:28px;
+}
+
+.shipment-modal-header h2{
+    font-size:1.8rem;
+    margin-bottom:6px;
+}
+
+.shipment-modal-header p{
+    color:#94a3b8;
+}
+
+.close-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    color:white;
+    background:#ef4444;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.shipment-details-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:18px;
+    margin-bottom:30px;
+}
+
+.detail-card{
+    display:flex;
+    gap:16px;
+    align-items:center;
+    background:rgba(255,255,255,.04);
+    border-radius:18px;
+    padding:20px;
+}
+
+.detail-card svg{
+    color:#38bdf8;
+}
+
+.detail-card h4{
+    margin-bottom:6px;
+    font-size:.95rem;
+    color:#cbd5e1;
+}
+
+.detail-card p{
+    font-weight:600;
+}
+
+.risk-card svg{
+    color:#f59e0b;
+}
+
+.shipment-timeline{
+    margin-bottom:30px;
+}
+
+.shipment-timeline h3{
+    margin-bottom:18px;
+}
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.timeline-item{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    color:#94a3b8;
+}
+
+.timeline-item span{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#475569;
+}
+
+.timeline-item.active{
+    color:white;
+}
+
+.timeline-item.active span{
+    background:#10b981;
+}
+
+.ai-recommendation-box{
+    background:rgba(59,130,246,.08);
+    border-left:4px solid #3b82f6;
+    border-radius:18px;
+    padding:22px;
+}
+
+.ai-recommendation-box h3{
+    margin-bottom:12px;
+}
+
+.ai-recommendation-box p{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+@media(max-width:768px){
+
+.shipment-modal{
+padding:20px;
+}
+
+.shipment-modal-header{
+flex-direction:column;
+gap:20px;
+}
+
+.shipment-details-grid{
+grid-template-columns:1fr;
+}
+
+}

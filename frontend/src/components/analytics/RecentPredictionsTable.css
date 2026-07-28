@@ -1,0 +1,98 @@
+.recent-table-card {
+  margin-top: 30px;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 28px;
+  overflow-x: auto;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.recent-table-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.18);
+}
+
+.table-header {
+  margin-bottom: 22px;
+}
+
+.table-header h2 {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.table-header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 16px 14px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+td {
+  padding: 18px 14px;
+  color: #e2e8f0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+tbody tr {
+  transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 72px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.risk-high {
+  background: rgba(239, 68, 68, 0.18);
+  color: #ef4444;
+}
+
+.risk-medium {
+  background: rgba(250, 204, 21, 0.18);
+  color: #facc15;
+}
+
+.risk-low {
+  background: rgba(34, 197, 94, 0.18);
+  color: #22c55e;
+}
+
+@media (max-width: 768px) {
+  .recent-table-card {
+    padding: 20px;
+  }
+
+  table {
+    min-width: 700px;
+  }
+}

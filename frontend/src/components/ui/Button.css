@@ -1,0 +1,25 @@
+.cs-button{
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:14px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.cs-button:hover{
+
+    background:#1d4ed8;
+
+}

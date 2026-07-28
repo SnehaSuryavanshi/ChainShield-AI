@@ -1,0 +1,79 @@
+.add-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.add-modal {
+  width: 700px;
+  max-width: 95%;
+  background: rgba(17, 24, 39, 0.98);
+  border-radius: 20px;
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.add-modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.add-modal-header h2{
+  color:white;
+}
+
+.add-modal-header button{
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+.add-form{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.add-form input,
+.add-form select{
+  padding:13px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.15);
+  background:#1f2937;
+  color:white;
+}
+
+.save-btn{
+  grid-column:span 2;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+  font-size:16px;
+  font-weight:600;
+}
+
+.save-btn:hover{
+  background:#1d4ed8;
+}
+
+@media(max-width:700px){
+
+.add-form{
+grid-template-columns:1fr;
+}
+
+.save-btn{
+grid-column:span 1;
+}
+
+}

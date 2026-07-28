@@ -1,0 +1,135 @@
+.tracking-table-card {
+  background: rgba(17, 24, 39, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.tracking-table-header {
+  margin-bottom: 20px;
+}
+
+.tracking-table-header h2 {
+  color: white;
+  margin-bottom: 6px;
+}
+
+.tracking-table-header p {
+  color: #94a3b8;
+}
+
+.tracking-table-wrapper {
+  overflow-x: auto;
+}
+
+.tracking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tracking-table th {
+  color: #94a3b8;
+  font-weight: 600;
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+}
+
+.tracking-table td {
+  padding: 18px 16px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tracking-table tbody tr {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.tracking-table tbody tr:hover {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.selected-shipment-row {
+  background: rgba(37, 99, 235, 0.16);
+  box-shadow: inset 4px 0 0 #3b82f6;
+}
+
+.selected-shipment-row:hover {
+  background: rgba(37, 99, 235, 0.22);
+}
+
+.selected-shipment-row td {
+  color: #ffffff;
+}
+
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.risk-badge.low {
+  background: rgba(34, 197, 94, 0.18);
+  color: #22c55e;
+}
+
+.risk-badge.medium {
+  background: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+}
+
+.risk-badge.high {
+  background: rgba(239, 68, 68, 0.18);
+  color: #f87171;
+}
+
+.view-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 14px;
+
+  background: #2563eb;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.view-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.view-btn:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 900px) {
+  .tracking-table th,
+  .tracking-table td {
+    padding: 14px 12px;
+    font-size: 13px;
+  }
+
+  .view-btn {
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+}

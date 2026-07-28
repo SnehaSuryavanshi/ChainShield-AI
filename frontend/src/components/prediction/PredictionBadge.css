@@ -1,0 +1,25 @@
+.prediction-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px 18px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.3px;
+}
+
+.prediction-badge.low{
+    background:#16a34a20;
+    color:#22c55e;
+}
+
+.prediction-badge.medium{
+    background:#ca8a0420;
+    color:#facc15;
+}
+
+.prediction-badge.high{
+    background:#dc262620;
+    color:#ef4444;
+}

@@ -1,0 +1,190 @@
+.shipments-table-card {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 30px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.shipments-table-header {
+  margin-bottom: 24px;
+}
+
+.shipments-table-header h3 {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.shipments-table-header p {
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+.shipments-table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+thead th {
+  color: #cbd5e1;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  padding: 0 18px 14px;
+  text-align: left;
+}
+
+tbody tr {
+  background: rgba(255, 255, 255, 0.03);
+  transition: 0.3s;
+}
+
+tbody tr:hover {
+  background: rgba(59, 130, 246, 0.08);
+  transform: translateY(-2px);
+}
+
+tbody td {
+  padding: 18px;
+  color: white;
+}
+
+tbody td:first-child {
+  border-radius: 14px 0 0 14px;
+  font-weight: 600;
+}
+
+tbody td:last-child {
+  border-radius: 0 14px 14px 0;
+}
+
+.risk-badge,
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.risk-badge.low {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+.risk-badge.medium {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.risk-badge.high {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+
+.risk-badge.critical {
+  background: rgba(168, 85, 247, 0.15);
+  color: #a855f7;
+}
+
+.status-badge.delivered {
+  background: rgba(34, 197, 94, 0.12);
+  color: #22c55e;
+}
+
+.status-badge.in-transit {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+}
+
+.status-badge.delayed {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+}
+
+.status-badge.high-risk {
+  background: rgba(239, 68, 68, 0.12);
+  color: #ef4444;
+}
+
+/* ===========================
+   ACTION BUTTONS
+=========================== */
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.view-btn,
+.edit-btn,
+.delete-btn {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.view-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.edit-btn {
+  background: white;
+  color: #111827;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.view-btn:hover,
+.edit-btn:hover,
+.delete-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .shipments-table-card {
+    padding: 20px;
+  }
+
+  tbody td {
+    padding: 14px;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+}

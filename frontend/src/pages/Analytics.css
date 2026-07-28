@@ -1,0 +1,114 @@
+.page-container {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    padding: 14px 32px 60px;
+}
+
+.analytics-chart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 28px;
+    margin: 32px 0;
+}
+
+@media (max-width: 900px) {
+    .analytics-chart-grid {
+        grid-template-columns: 1fr;
+    }
+.analytics-page{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.analytics-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.12);
+
+    filter:blur(120px);
+
+    top:-120px;
+
+    right:-120px;
+
+    pointer-events:none;
+
+}
+
+.analytics-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:360px;
+
+    height:360px;
+
+    border-radius:50%;
+
+    background:rgba(14,165,233,.10);
+
+    filter:blur(120px);
+
+    bottom:-140px;
+
+    left:-100px;
+
+    pointer-events:none;
+
+}
+
+    .page-container {
+        padding: 24px 18px 40px;
+    }
+}
+@keyframes fadeUp {
+
+    from{
+        opacity:0;
+        transform:translateY(24px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.page-header{
+    animation:fadeUp .6s ease;
+}
+
+.analytics-grid{
+    animation:fadeUp .8s ease;
+}
+
+.analytics-chart-grid{
+    animation:fadeUp 1s ease;
+}
+
+.trend-chart-card{
+    animation:fadeUp 1.15s ease;
+}
+
+.ai-insights-card{
+    animation:fadeUp 1.3s ease;
+}
+
+.recent-table-card{
+    animation:fadeUp 1.45s ease;
+}

@@ -1,0 +1,12 @@
+.cs-card{
+    background:#0b1120;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:18px;
+    padding:22px;
+    transition:.3s;
+}
+
+.cs-card:hover{
+    transform:translateY(-3px);
+    border-color:rgba(59,130,246,.35);
+}

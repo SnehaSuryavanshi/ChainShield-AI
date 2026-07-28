@@ -1,0 +1,482 @@
+/* ===========================
+   MAP CARD
+=========================== */
+
+.tracking-map-card {
+  position: relative;
+  overflow: hidden;
+
+  background: rgba(17, 24, 39, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+
+  border-radius: 20px;
+  padding: 24px;
+}
+
+/* Blue radial glow */
+
+.tracking-map-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -180px;
+  top: -180px;
+
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.22),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.tracking-map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 22px;
+}
+
+.tracking-map-header h2 {
+  color: white;
+  margin-bottom: 6px;
+}
+
+.tracking-map-header p {
+  color: #94a3b8;
+}
+
+.live-badge {
+  background: rgba(34, 197, 94, 0.15);
+
+  color: #22c55e;
+
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  box-shadow: 0 0 12px rgba(34, 197, 94, .25);
+}
+
+/* ===========================
+   MAP
+=========================== */
+
+.tracking-map-wrapper {
+  position: relative;
+}
+
+.tracking-map {
+  height: 520px;
+  width: 100%;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  filter: brightness(.72)
+          contrast(1.08)
+          saturate(.82);
+}
+
+/* ===========================
+   PREMIUM TRUCK MARKER
+=========================== */
+
+.truck-marker {
+
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  background: rgba(37,99,235,.18);
+
+  backdrop-filter: blur(12px);
+
+  border: 2px solid rgba(96,165,250,.85);
+
+  box-shadow:
+      0 0 0 6px rgba(37,99,235,.10),
+      0 12px 24px rgba(0,0,0,.35);
+
+  animation: truckPulse 2.5s infinite ease-in-out;
+
+  transition: .3s;
+}
+
+.truck-marker:hover{
+
+transform: scale(1.15);
+
+}
+
+.truck-marker::before{
+
+content:"";
+
+position:absolute;
+
+width:64px;
+height:64px;
+
+border-radius:50%;
+
+background:rgba(59,130,246,.18);
+
+animation: markerRipple 2.5s infinite;
+
+z-index:-1;
+
+}
+
+.truck-marker-inner{
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+width:32px;
+height:32px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.92);
+
+font-size:18px;
+
+box-shadow:0 4px 10px rgba(0,0,0,.2);
+
+}
+
+@keyframes truckPulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+@keyframes markerRipple{
+
+0%{
+
+transform:scale(.8);
+
+opacity:.8;
+
+}
+
+100%{
+
+transform:scale(1.9);
+
+opacity:0;
+
+}
+
+}
+
+/* ===========================
+   SELECTED TRUCK
+=========================== */
+
+.truck-marker.selected {
+
+  transform: scale(1.22);
+
+  border-color: #60a5fa;
+
+  background: rgba(59,130,246,.35);
+
+  box-shadow:
+    0 0 0 8px rgba(59,130,246,.18),
+    0 0 35px rgba(59,130,246,.75),
+    0 16px 32px rgba(0,0,0,.45);
+
+  animation: selectedTruckPulse 1.6s infinite;
+}
+
+.truck-marker.selected::before {
+
+  width: 74px;
+  height: 74px;
+
+  background: rgba(59,130,246,.30);
+
+  animation: selectedRipple 1.6s infinite;
+}
+
+.truck-marker.selected .truck-marker-inner {
+
+  background: #ffffff;
+
+  transform: scale(1.08);
+
+  box-shadow:
+    0 0 18px rgba(96,165,250,.8),
+    0 4px 12px rgba(0,0,0,.25);
+}
+
+@keyframes selectedTruckPulse {
+
+  0% {
+    transform: scale(1.18);
+  }
+
+  50% {
+    transform: scale(1.28);
+  }
+
+  100% {
+    transform: scale(1.18);
+  }
+}
+
+@keyframes selectedRipple {
+
+  0% {
+    transform: scale(.9);
+    opacity: .9;
+  }
+
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+/* ===========================
+   FLEET STATUS
+=========================== */
+
+.fleet-status-card{
+
+position:absolute;
+
+top:20px;
+right:20px;
+
+width:270px;
+
+background:rgba(15,23,42,.82);
+
+backdrop-filter:blur(22px);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
+
+padding:22px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+z-index:999;
+
+}
+
+.fleet-header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:24px;
+
+}
+
+.fleet-header h3{
+
+color:white;
+
+margin-bottom:4px;
+
+}
+
+.fleet-header p{
+
+font-size:12px;
+
+color:#94a3b8;
+
+}
+
+.fleet-live-dot{
+
+width:12px;
+height:12px;
+
+border-radius:50%;
+
+background:#22c55e;
+
+box-shadow:0 0 16px #22c55e;
+
+animation:pulseDot 2s infinite;
+
+}
+
+.fleet-stat{
+
+margin-bottom:18px;
+
+}
+
+.fleet-top{
+
+display:flex;
+
+justify-content:space-between;
+
+margin-bottom:8px;
+
+color:#e2e8f0;
+
+font-size:14px;
+
+}
+
+.fleet-progress{
+
+height:8px;
+
+background:#1f2937;
+
+border-radius:999px;
+
+overflow:hidden;
+
+}
+
+.fleet-progress-fill{
+
+height:100%;
+
+border-radius:999px;
+
+transition:1s;
+
+}
+
+.fleet-progress-fill.blue{
+
+background:#3b82f6;
+
+}
+
+.fleet-progress-fill.green{
+
+background:#22c55e;
+
+}
+
+.fleet-progress-fill.orange{
+
+background:#f59e0b;
+
+}
+
+.fleet-progress-fill.purple{
+
+background:#8b5cf6;
+
+}
+
+@keyframes pulseDot{
+
+0%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:scale(1.3);
+
+opacity:.5;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.tracking-map-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:18px;
+
+}
+
+.fleet-status-card{
+
+position:static;
+
+width:100%;
+
+margin-top:20px;
+
+}
+
+.tracking-map{
+
+height:420px;
+
+}
+
+}

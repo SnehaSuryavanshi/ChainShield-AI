@@ -1,0 +1,114 @@
+.model-insights-page{
+    position:relative;
+    overflow:hidden;
+    min-height:100vh;
+}
+
+.model-insights-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:rgba(37,99,235,.12);
+
+    filter:blur(120px);
+
+    top:-120px;
+    right:-120px;
+
+    pointer-events:none;
+
+}
+
+.model-insights-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:360px;
+    height:360px;
+
+    border-radius:50%;
+
+    background:rgba(14,165,233,.10);
+
+    filter:blur(120px);
+
+    bottom:-140px;
+    left:-100px;
+
+    pointer-events:none;
+
+}
+
+.model-page-container{
+
+    width:min(1400px,100%);
+    margin:auto;
+
+    padding:14px 32px 60px;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(24px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.model-page-header{
+    animation:fadeUp .6s ease;
+}
+
+.metrics-grid{
+    animation:fadeUp .8s ease;
+}
+
+.feature-chart-card{
+    animation:fadeUp 1s ease;
+}
+
+.performance-chart-card{
+    animation:fadeUp 1.15s ease;
+}
+
+.confidence-chart-card{
+    animation:fadeUp 1.3s ease;
+}
+
+.ai-card{
+    animation:fadeUp 1.45s ease;
+}
+
+.statistics-card{
+    animation:fadeUp 1.6s ease;
+}
+
+@media(max-width:900px){
+
+.model-page-container{
+
+padding:24px 18px 40px;
+
+}
+
+}

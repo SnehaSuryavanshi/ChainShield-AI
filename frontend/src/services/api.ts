@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:8000";
+const API = "https://chainshield-ai.onrender.com";
 
 export async function getShipments() {
   const response = await fetch(`${API}/shipments`);
